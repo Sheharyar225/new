@@ -10,7 +10,7 @@ export const typeOrmConfig: TypeOrmModuleOptions = {
   host: process.env.DATABASE_HOST || 'localhost',
   port: parseInt(process.env.DATABASE_PORT || '3306', 10),
   username: process.env.DATABASE_USERNAME || 'root',
-  password: process.env.DATABASE_PASSWORD || '',
+  password: process.env.DATABASE_PASSWORD ||,
   database: process.env.DATABASE_NAME || 'url_shortener',
   entities: [User, ShortUrl],
   synchronize: true, // DEV only. Use migrations in production.
